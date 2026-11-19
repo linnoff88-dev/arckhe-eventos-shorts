@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>INEMA Events in 30 seconds</title>
+<meta name="description" content="Nine 30-second shorts with Nei Maldaner, one per area of eventos.inema.pro. Free projects and courses at inema.club.">
+<meta property="og:title" content="INEMA Events in 30 seconds">
+<meta property="og:description" content="Nine 30-second shorts with Nei Maldaner, one per area of eventos.inema.pro. Free projects and courses at inema.club.">
+<meta property="og:url" content="https://inematds.github.io/eventos-shorts/en/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23171b20'/%3E%3Cpath d='M11 8l12 8-12 8z' fill='%23efbe69'/%3E%3C/svg%3E">
+<style>
+:root{color-scheme:dark;--bg:#0e1115;--panel:#171b20;--line:#2a3139;--ink:#f7f1e7;--dim:#a9b1bc;--amber:#efbe69;--amber2:#ffb638}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--amber)}
+header{padding:40px 16px 16px;max-width:1180px;margin:auto}
+.kick{font:600 13px/1 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.22em;color:var(--amber);text-transform:uppercase}
+h1{font-size:clamp(30px,6vw,48px);line-height:1.08;margin:12px 0 10px;letter-spacing:-.01em}
+.lead{color:var(--dim);max-width:720px;margin:0}
+.cta{display:inline-block;margin-top:18px;background:var(--amber);color:#1a1300;font-weight:700;text-decoration:none;padding:12px 20px;border-radius:12px}
+.cta:hover{background:var(--amber2)}
+main{max-width:1180px;margin:auto;padding:8px 16px 48px}
+.grid{display:grid;grid-template-columns:1fr;gap:22px}
+@media(min-width:640px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:980px){.grid{grid-template-columns:repeat(3,1fr)}}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column}
+.card video{display:block;width:100%;aspect-ratio:9/16;background:#05070d;object-fit:cover}
+.body{padding:16px 16px 18px;display:flex;flex-direction:column;gap:8px;flex:1}
+.num{font:600 12px/1 ui-monospace,Menlo,monospace;letter-spacing:.2em;color:var(--dim)}
+h2{font-size:21px;line-height:1.2;margin:0}
+.hook{color:var(--dim);margin:0;flex:1}
+.btn{display:inline-block;align-self:flex-start;margin-top:6px;border:1.5px solid var(--amber);color:var(--amber);text-decoration:none;font-weight:600;padding:10px 16px;border-radius:10px}
+.btn:hover{background:rgba(239,190,105,.12)}
+.btn:focus-visible,.cta:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+footer{border-top:1px solid var(--line);padding:28px 16px 48px;text-align:center;color:var(--dim);font-size:15px}
+footer p{max-width:720px;margin:6px auto}
+</style>
+</head>
+<body>
+<header style="position:relative"><nav class="langs" style="position:absolute;top:16px;right:16px;font:600 14px/1 system-ui"><a href="../" hreflang="pt">PT</a> · <b>EN</b> · <a href="../es/" hreflang="es">ES</a></nav>
+  <div class="kick">INEMA Events · 9 areas · 30 seconds each</div>
+  <h1>The nine areas of INEMA Events, in 30 seconds each, with Nei.</h1>
+  <p class="lead">One vertical video per area: the hook, the core idea with facts from the page itself, and the invitation. Tap to watch; the button takes you to the full area.</p>
+  <a class="cta" href="https://inema.club">Free projects and courses at inema.club →</a>
+</header>
+<main>
+  <div class="grid" id="grid"></div>
+</main>
+<footer>
+  <p>Nei Maldaner’s avatar and voice · made with <a href="https://inematds.github.io/explicavideos/guia/">Explicavideos</a> (v2, 9:16).</p>
+  <p><a href="https://eventos.inema.pro/">eventos.inema.pro</a> · <a href="https://inema.club">inema.club</a> · <a href="https://github.com/inematds/eventos-shorts/releases/tag/v1.0.0">download the MP4s (release v1.0.0)</a></p>
+</footer>
+<script>
+// Origem dos vídeos: troque aqui para apontar a outro release/CDN. Cada vídeo é RELEASE_BASE + slug + '.mp4'.
+const RELEASE_BASE = 'https://github.com/inematds/eventos-shorts/releases/download/v1.0.0/';
+const AREAS = [
+  ["rsi", "RSI", "Your company uses AI every day and doesn’t improve. Because that AI ends there: it answers and forgets."],
+  ["ia-cultivada", "IA Cultivada", "Your AI model is the same as your competitor’s. What changes is the garden."],
+  ["claude-codex", "Claude → Codex", "You’re locked into your AI model and didn’t even notice. Don’t migrate your brain."],
+  ["codex-claude", "Codex + Claude", "Claude or Codex? Wrong question. One plans, the other critiques."],
+  ["oswork", "OSWork", "Does every conversation with AI start from scratch? That’s not a work system, it’s chat."],
+  ["jev", "JEV", "Your AI makes decisions and you don’t know why? Without criteria and evaluation, it’s a gamble."],
+  ["gestao-ia", "AI Management", "Creating agents got easy. Managing them didn’t. 2027 is the year of managing agents."],
+  ["agi-ready", "AGI-ready", "AI stopped waiting for orders. Your job now is to direct agents."],
+  ["webmcp", "WebMCP", "The next visitor to your site might not be a person. Run the free diagnostic."],
+];
+const grid = document.getElementById('grid');
+AREAS.forEach(([slug, nome, gancho], i) => {
+  const card = document.createElement('article'); card.className = 'card';
+  card.innerHTML = `
+    <video controls preload="metadata" playsinline src="${RELEASE_BASE}${slug}-en.mp4" aria-label="${nome} in 30 seconds"></video>
+    <div class="body">
+      <div class="num">${String(i + 1).padStart(2, '0')} / ${String(AREAS.length).padStart(2, '0')}</div>
+      <h2>${nome}</h2>
+      <p class="hook">${gancho}</p>
+      <a class="btn" href="https://eventos.inema.pro/${slug}/en/">See the area →</a>
+    </div>`;
+  grid.appendChild(card);
+});
+</script>
+</body>
+</html>

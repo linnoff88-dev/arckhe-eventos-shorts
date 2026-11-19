@@ -1,0 +1,5 @@
+# Os MP4 vão no GitHub Release (v1.0.0), nunca no repo.
+*.mp4
+*.srt
+node_modules/
+.DS_Store
